@@ -97,9 +97,11 @@ The agent’s backbone is a hybrid CNN–Transformer encoder:
    * A special \[CLS] token embedding global board context.
    * A learnable `token_in` (dim 512) carries temporal memory between moves.
 
-4. **Transformer Encoder**
-   Six layers ($d_{\text{model}}=512,\,h=16$) process the sequence
-   $\big[\text{CLS},\,\text{token\_in},\,\text{cells}_{1..64}\big]$.
+4. **Transformer Encoder**  
+   Six layers ($d_{\text{model}} = 512,\; h = 16$) process the sequence  
+   `[CLS]`, `token_in`, and `cells_{1..64}` concatenated as  
+   `\bigl[[CLS], token_in, cells_{1..64}\bigr]`.
+
 
 5. **Heads**
 
