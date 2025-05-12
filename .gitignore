@@ -1,0 +1,17 @@
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+# IDE
+.idea/
+# Logs / checkpoints
+*.csv
+*.log
+# Large weights & datasets
+*.pt
+*.h5
+# OS
+.DS_Store
+chess_model_transformer_weights_exp2.pth
